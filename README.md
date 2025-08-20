@@ -32,7 +32,7 @@ It’s intended as a **starting point for new services**, so you can copy this r
 
 ---
 
-## 🔐 Security Features
+## 🛡️ Security Features
 
 - **CORS & Helmet**:  
   The API already uses [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to restrict cross-origin requests and [Helmet](https://helmetjs.github.io/) to set secure HTTP headers.
@@ -77,6 +77,8 @@ Finally, create a **.env** file with the following keys:
 - `NODE_ENV=development` (see `env.config.ts` for accepted values)  
 - `PORT=8080`
 
+---
+
 ## 🪜 Setup
 ### Make a copy of the repo
 1. **Clone the repo**  
@@ -114,8 +116,6 @@ PORT=8080
 - Update `GCP_PROJECT_ID`, `REGION`, `ARTIFACT_REGISTRY_REPO`, and `SERVICE_NAME` in your GitHub Actions workflow.  
 - Ensure your service account key has the proper permissions for Cloud Run and Artifact Registry.
 
----
-
 ### Additional Steps 
 >These steps are already included in the [Deployment](#deployment) automation. Specifically when you push to `main`, perform these steps if needed (eg. for local development testing).
 
@@ -143,6 +143,8 @@ gcloud run deploy <your-service-name> \
   --allow-unauthenticated
 ```
 
+---
+
 ## 🖥️ Running Locally
 
 - Run API locally (Express server):
@@ -155,6 +157,8 @@ yarn dev
 ```bash
 docker run -p 8080:8080 <your-region>-docker.pkg.dev/<your-project-id>/<your-repo>/<your-service-name>:latest
 ```
+
+---
 
 ## ☁️ Deploying to Cloud Run
 
@@ -172,3 +176,10 @@ The workflow will:
 
 **Optional best practice:**  
 - You can enforce a branch protection rule in GitHub so that `main` can only be updated after the `staging` branch passes tests. This ensures that only verified code is deployed to production.
+
+---
+## 👤 Creator
+
+This API template was created by **Arthur Artugue**.  
+
+[GitHub](https://github.com/majiinB) | [Portfolio](https://personal-portfolio-virid-delta.vercel.app) | [Email](mailto:arthurartugue392@gmail.com)
