@@ -1,0 +1,23 @@
+# Node / npm
+node_modules
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# Build / test files
+dist
+*.test.ts
+coverage
+.vscode
+*.log
+
+# Git & configs
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+
+# Env files
+.env
+.env.*
