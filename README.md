@@ -4,17 +4,25 @@ This repository contains a template for an API built with **Node.js, Express, an
 
 ---
 
+## 👤 Creator
+
+This API template was created by **Arthur Artugue**.  
+
+[GitHub](https://github.com/majiinB) | [Portfolio](https://personal-portfolio-virid-delta.vercel.app) | [Email](mailto:arthurartugue392@gmail.com)
+
+---
+
 ## 📃 Table of Contents
 
-1. [Overview](#overview)  
-2. [Security Features](#security-features)  
-2. [Prerequisites](#prerequisites)  
+1. [Overview](#-overview)  
+2. [Security Features](#-security-features)  
+2. [Prerequisites](#-prerequisites)  
     - [Make a copy](#make-a-copy-of-the-repo)  
     - [What to Change](#what-to-change) 
     - [Additional Steps](#additional-steps)  
-3. [Setup](#setup)  
-4. [Running Locally](#running-locally)  
-5. [Deploying to Cloud Run](#deploying-to-cloud-run)  
+3. [Setup](#-setup)  
+4. [Running Locally](#-running-locally)  
+5. [Deploying to Cloud Run](#d-eploying-to-cloud-run)  
   
 
 ---
@@ -177,9 +185,3 @@ The workflow will:
 **Optional best practice:**  
 - You can enforce a branch protection rule in GitHub so that `main` can only be updated after the `staging` branch passes tests. This ensures that only verified code is deployed to production.
 
----
-## 👤 Creator
-
-This API template was created by **Arthur Artugue**.  
-
-[GitHub](https://github.com/majiinB) | [Portfolio](https://personal-portfolio-virid-delta.vercel.app) | [Email](mailto:arthurartugue392@gmail.com)
