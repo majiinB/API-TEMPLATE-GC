@@ -93,7 +93,7 @@ yarn install
 ```
 
 3. **Create your `.env` file**  
-```json
+```bash
 NODE_ENV=development
 PORT=8080
 ```
@@ -106,6 +106,9 @@ PORT=8080
 
 #### .env file
 - Set `NODE_ENV`, `PORT`, and any other environment variables your API needs.
+
+#### Github Workflows
+- Uncomment the whole script if automation is needed, delete if otherwise.
 
 #### Google Cloud configuration
 - Update `GCP_PROJECT_ID`, `REGION`, `ARTIFACT_REGISTRY_REPO`, and `SERVICE_NAME` in your GitHub Actions workflow.  

@@ -33,10 +33,10 @@
 #     if: github.ref == 'refs/heads/main'
 #     runs-on: ubuntu-latest
 #     env:
-#       SERVICE_NAME: hw-authentication-api
-#       GCP_PROJECT_ID: heron-wellnest
-#       REGION: asia-southeast1
-#       ARTIFACT_REGISTRY_REPO: heron-repo
+#       SERVICE_NAME: <Your-service-or-api-name>
+#       GCP_PROJECT_ID: <Your-google-cloud-project-id>
+#       REGION: <Your-chosen-region>
+#       ARTIFACT_REGISTRY_REPO: <The-name-of-your-artifact-registry-repo>
 #     steps:
 #       - uses: actions/checkout@v3
 
