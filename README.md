@@ -40,10 +40,11 @@ It’s intended as a **starting point for new services**, so you can copy this r
 
 ---
 
-## 🛡️ Security Features
+## 🔐 Security Features
 
 - **CORS & Helmet**:  
   The API already uses [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to restrict cross-origin requests and [Helmet](https://helmetjs.github.io/) to set secure HTTP headers.
+  > **Note:** Rate limiting was not included since this is expected to run in `Google Cloud Run`. The API will be behind a load balancer so rate limiting by IP address will not work. In addition, in memory cache (like Redis) will be dependent on your architecture (Stateless or Stateful). I recommend using `Redis` served in the cloud or just use `Google Cloud Armor`. 
 
 - **Service Accounts**:  
   Deployment uses a Google Cloud service account with minimal required permissions for Cloud Run and Artifact Registry. The key is stored securely in GitHub Secrets (`GCP_KEY`) and is never committed to the repo.
@@ -125,7 +126,7 @@ PORT=8080
 - Ensure your service account key has the proper permissions for Cloud Run and Artifact Registry.
 
 ### Additional Steps 
->These steps are already included in the [Deployment](#deployment) automation. Specifically when you push to `main`, perform these steps if needed (eg. for local development testing).
+>**Note:** These steps are already included in the [Deployment](#deployment) automation. Specifically when you push to `main`, perform these steps if needed (eg. for local development testing).
 
 4. **Build the Docker image**  
 ```bash
@@ -180,7 +181,7 @@ The workflow will:
 - Build and push Docker image to Artifact Registry  
 - Deploy the API to Cloud Run  
 
-> Make sure the `GCP_KEY` secret in GitHub contains your service account JSON key.
+>**Note:** Make sure the `GCP_KEY` secret in GitHub contains your service account JSON key.
 
 **Optional best practice:**  
 - You can enforce a branch protection rule in GitHub so that `main` can only be updated after the `staging` branch passes tests. This ensures that only verified code is deployed to production.
