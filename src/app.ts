@@ -24,16 +24,13 @@
 
 import express from 'express';
 import cors from 'cors';
-import helmet from 'helmet';
 import {corsOptions} from './config/cors.config.js'; 
-import {helmetConfig} from './config/helmet.conifg.js';
 import { loggerMiddleware } from './middlewares/logger.middleware.js';
 import { errorMiddleware } from './middlewares/error.middleware.js';
 
 const app : express.Express = express();
 
 // Middlewares
-app.use(helmet(helmetConfig));
 app.use(cors(corsOptions));
 app.use(express.json()); 
 app.use(loggerMiddleware); // Custom logger middleware
