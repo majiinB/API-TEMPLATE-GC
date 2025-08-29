@@ -42,8 +42,8 @@ It’s intended as a **starting point for new services**, so you can copy this r
 
 ## 🔐 Security Features
 
-- **CORS & Helmet**:  
-  The API already uses [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to restrict cross-origin requests and [Helmet](https://helmetjs.github.io/) to set secure HTTP headers.
+- **CORS**:  
+  The API already uses [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to restrict cross-origin requests.
   > **Note:** Rate limiting was not included since this is expected to run in `Google Cloud Run`. The API will be behind a load balancer so rate limiting by IP address will not work. In addition, in memory cache (like Redis) will be dependent on your architecture (Stateless or Stateful). I recommend using `Redis` served in the cloud or just use `Google Cloud Armor`. 
 
 - **Service Accounts**:  
